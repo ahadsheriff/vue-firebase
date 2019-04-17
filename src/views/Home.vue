@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <p></p>
+    <HelloWorld msg="Welcome to Your Vue.js App" name="Ahad Sheriff"/>
     <button @click="logout">Logout</button>
     <button @click="deleteAccount">Delete Account</button>
   </div>
@@ -18,7 +17,7 @@ export default {
     HelloWorld
   },
   methods: {
-    
+
     logout: function() {
       console.log("user logging out")
       firebase.auth().signOut().then(() => {
