@@ -2,17 +2,21 @@ import Vue from 'vue';
 import firebase from 'firebase';
 import App from './App.vue';
 import router from './router';
+import VuePhoneNumberInput from 'vue-phone-number-input';
+import 'vue-phone-number-input/dist/vue-phone-number-input.css';
+
+Vue.component('vue-phone-number-input', VuePhoneNumberInput);
 
 Vue.config.productionTip = false;
 
 let app = '';
 const config = {
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'YOUR_PROJECT_ID.firebaseapp.com',
-  databaseURL: 'https://YOUR_PROJECT_ID.firebaseio.com',
-  projectId: 'YOUR_PROJECT_ID',
-  storageBucket: 'YOUR_PROJECT_ID.appspot.com',
-  messagingSenderId: 'YOUR_MESSAGING_SEND_ID'
+    apiKey: "AIzaSyDARVg6b3tZTTiEeGJXwYuWS8v2SpkOKlc",
+    authDomain: "roundup-service.firebaseapp.com",
+    databaseURL: "https://roundup-service.firebaseio.com",
+    projectId: "roundup-service",
+    storageBucket: "roundup-service.appspot.com",
+    messagingSenderId: "454234840328"
 };
 
 firebase.initializeApp(config);

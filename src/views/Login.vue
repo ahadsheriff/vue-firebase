@@ -3,8 +3,8 @@
         <h3>Sign In</h3>
         <input type="text" v-model="email" placeholder="Email"><br>
         <input type="password" v-model="password" placeholder="Password"><br>
-        <button @click="login">Connection</button>
-        <p>You don't have an account ? You can <router-link to="/sign-up">create one</router-link></p>
+        <button @click="login">Log In</button>
+        <p>Don't have an account ? <router-link to="/sign-up">Create one</router-link></p>
     </div>
 </template>
 
@@ -22,6 +22,7 @@
         login: function() {
             firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
             (user) => {
+                console.log("logging in")
                 this.$router.replace('home')
             },
             (err) => {
