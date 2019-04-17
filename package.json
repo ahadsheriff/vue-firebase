@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "firebase": "^5.9.4",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
@@ -36,6 +37,10 @@
     "parserOptions": {
       "parser": "babel-eslint"
     }
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "singleQuote": true
   },
   "postcss": {
     "plugins": {
