@@ -2,10 +2,8 @@ import Vue from 'vue';
 import firebase from 'firebase';
 import App from './App.vue';
 import router from './router';
-import VuePhoneNumberInput from 'vue-phone-number-input';
-import 'vue-phone-number-input/dist/vue-phone-number-input.css';
-
-Vue.component('vue-phone-number-input', VuePhoneNumberInput);
+import VueFire from 'vuefire'
+import 'firebase/firestore'
 
 Vue.config.productionTip = false;
 
@@ -20,6 +18,7 @@ const config = {
 };
 
 firebase.initializeApp(config);
+export const db = firebase.firestore()
 
 firebase.auth().onAuthStateChanged(() => {
   if (!app) {
